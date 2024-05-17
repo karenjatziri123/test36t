@@ -54,6 +54,9 @@ const Clientes = () => {
     const newData = data.filter((item) => item.id !== id);
     setData(newData);
     setShowToast(true); // Mostrar el Toast
+    
+    //DATO POR SI SIRVE EL API
+    //clientService.deleteCliente(id)
   };
 
   const handleEdit = (id) => {
