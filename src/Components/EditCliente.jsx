@@ -1,20 +1,27 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Button, Form, Container, Row, Col, Card, Toast, ToastContainer, Spinner} from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation} from "react-router-dom";
 import clientService from "../services/clientService";
 
-const EditCliente = (nombreComercial, correo, telefono) => {
+const EditCliente = () => {
+    const { state } = useLocation();
+  const cliente = state.cliente;
+console.log(cliente, 'revisando')
   const [messageToast, setMessageToast] = useState(null);
   const [titleToast, setTitleToast] = useState(null);
   const [showToast, setShowToast] = useState(false);
   const navigate = useNavigate();
   const [loading, setLoading]=useState(false)
-
+  const [telefono, setTelefono] = useState(cliente.telefono);
+  useEffect(() => {
+    // Actualizar el estado del teléfono cuando cambie el cliente
+    setTelefono(cliente.telefono);
+  }, [cliente.telefono]);
   const handleSubmit = async (event) => {
     event.preventDefault();
     const newCliente = {
-      nombre_comercial: nombreComercial,
-      correo: correo,
+      nombre_comercial: cliente.nombre_comercial,
+      correo: cliente.correo,
       telefono: telefono,
     };
     try {
@@ -34,6 +41,9 @@ const EditCliente = (nombreComercial, correo, telefono) => {
     }
   };
   const handleCloseToast = () => setShowToast(false);
+  const handleChange = (event) => {
+    setTelefono(event.target.value);
+};
   return (
     <div
       style={{
@@ -63,8 +73,8 @@ const EditCliente = (nombreComercial, correo, telefono) => {
                         className="form-control"
                         id="name"
                         placeholder="Ingresa el nombre comercial"
-                        value={nombreComercial}
-                        onChange={(e) => nombreComercial=e.target.value}
+                        value={cliente.nombre_comercial}
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="mb-3">
@@ -74,8 +84,8 @@ const EditCliente = (nombreComercial, correo, telefono) => {
                         className="form-control"
                         id="email"
                         placeholder="Ingresa el correo electrónico principal"
-                        value={correo}
-                        onChange={(e) => correo=e.target.value}
+                        value={cliente.correo}
+                        onChange={(e) => cliente.correo=e.target.value}
                       />
                     </div>
                     <div className="mb-3">
@@ -85,14 +95,13 @@ const EditCliente = (nombreComercial, correo, telefono) => {
                         className="form-control"
                         id="phone"
                         placeholder="Ingrese el teléfono principal"
-                        value={telefono}
-                        maxLength={10}
-                        onChange={(e) => telefono=e.target.value}
+                        value={cliente.telefono}
+                        onChange={handleChange}
                       />
                     </div>
                     <Row className="mt-4">
                     <Col className="d-flex justify-content-end">
-                        <Button type="submit" className="btn btn-primary me-2" disabled={nombreComercial.length===0 || loading ? true : false}>
+                        <Button type="submit" className="btn btn-primary me-2" disabled={cliente.nombre_comercial.length===0 || loading ? true : false}>
                           {loading ? <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /> : 'Guardar'}
                         </Button>
                         <Link to="/clientes">

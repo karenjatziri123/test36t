@@ -41,9 +41,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.24.5",
-    "@babel/preset-env": "^7.24.5",
-    "@babel/preset-react": "^7.24.1",
-    "babel-jest": "^29.7.0"
+    "react-app-rewired": "^2.2.1"
   }
 }

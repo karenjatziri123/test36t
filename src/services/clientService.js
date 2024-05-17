@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-    baseURL: 'https://ext-donation-lance-hunger.trycloudflare.com/', 
+    baseURL: 'https://ext-donation-lance-hunger.trycloudflare.com', 
     headers: {
         'Content-Type': 'application/json',
     },

@@ -1,0 +1,110 @@
+export const  datosFicticios = [
+    {
+      id: 1,
+      nombre_comercial: "Empresa A",
+      telefono: "123-456-7890",
+      correo: "empresaA@example.com",
+    },
+    {
+      id: 2,
+      nombre_comercial: "Empresa B",
+      telefono: "234-567-8901",
+      correo: "empresaB@example.com",
+    },
+    {
+      id: 3,
+      nombre_comercial: "Empresa C",
+      telefono: "345-678-9012",
+      correo: "empresaC@example.com",
+    },
+    {
+        id: 4,
+        nombre_comercial: "Empresa D",
+        telefono: "456-789-0123",
+        correo: "empresaD@example.com",
+      },
+      {
+        id: 5,
+        nombre_comercial: "Empresa E",
+        telefono: "567-890-1234",
+        correo: "empresaE@example.com",
+      },
+      {
+        id: 6,
+        nombre_comercial: "Empresa F",
+        telefono: "678-901-2345",
+        correo: "empresaF@example.com",
+      },
+      {
+        id: 7,
+        nombre_comercial: "Empresa G",
+        telefono: "789-012-3456",
+        correo: "empresaG@example.com",
+      },
+      {
+        id: 8,
+        nombre_comercial: "Empresa H",
+        telefono: "890-123-4567",
+        correo: "empresaH@example.com",
+      },
+      {
+        id: 9,
+        nombre_comercial: "Empresa I",
+        telefono: "901-234-5678",
+        correo: "empresaI@example.com",
+      },
+      {
+        id: 10,
+        nombre_comercial: "Empresa J",
+        telefono: "012-345-6789",
+        correo: "empresaJ@example.com",
+      },
+      {
+        id: 11,
+        nombre_comercial: "Empresa K",
+        telefono: "987-654-3210",
+        correo: "empresaK@example.com",
+      },
+      {
+        id: 12,
+        nombre_comercial: "Empresa L",
+        telefono: "876-543-2109",
+        correo: "empresaL@example.com",
+      },
+      {
+        id: 13,
+        nombre_comercial: "Empresa M",
+        telefono: "765-432-1098",
+        correo: "empresaM@example.com",
+      },
+      {
+        id: 14,
+        nombre_comercial: "Empresa N",
+        telefono: "654-321-0987",
+        correo: "empresaN@example.com",
+      },
+      {
+        id: 15,
+        nombre_comercial: "Empresa O",
+        telefono: "543-210-9876",
+        correo: "empresaO@example.com",
+      },
+      {
+        id: 16,
+        nombre_comercial: "Empresa P",
+        telefono: "432-109-8765",
+        correo: "empresaP@example.com",
+      },
+      {
+        id: 17,
+        nombre_comercial: "Empresa Q",
+        telefono: "321-098-7654",
+        correo: "empresaQ@example.com",
+      },
+      {
+        id: 18,
+        nombre_comercial: "Empresa R",
+        telefono: "210-987-6543",
+        correo: "empresaR@example.com",
+      }
+  ];
