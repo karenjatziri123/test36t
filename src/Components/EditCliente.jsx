@@ -60,7 +60,7 @@ console.log(cliente, 'revisando')
             <Container>
               <Row className="my-4 justify-content-between align-items-center">
                 <Col>
-                  <h2>Agregar cliente</h2>
+                  <h2>Editar cliente</h2>
                 </Col>
               </Row>
               <Row className="my-4 justify-content-center">
